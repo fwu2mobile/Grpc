@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package calculator;
+
+message UserInput{
+    int32 op1 = 1;
+    int32 op2 = 2;
+    
+}
+
+message Result{
+    int32 result =1;
+}
+
+service CalculatorService{
+    rpc sum(UserInput) returns (Result);
+} 
